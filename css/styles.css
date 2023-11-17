@@ -345,6 +345,8 @@ main {
 }
 .possibilities {
   position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 .possibilities__mask {
   position: absolute;
@@ -470,4 +472,12 @@ main {
   .possibilities__wrapper-arrow {
     display: none;
   }
+}
+.social {
+  background-image: url("../../images/app_img.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  max-width: 1440px;
+  height: 300px;
+  margin: 0 auto;
 }/*# sourceMappingURL=styles.css.map */
