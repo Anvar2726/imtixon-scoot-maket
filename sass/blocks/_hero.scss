@@ -1,0 +1,129 @@
+.hero{
+    max-width: 1440px;
+    width: 100%;
+    min-height: 650px;
+    margin: 0 auto;
+    margin-top: 80px;
+    padding-top: 100px;
+    //background-image: url("../../images/hero_bg.jpg");
+    background-image: url("../../images/Bitmap.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    &__title{
+        color: #FFF;
+        font-size: 56px;
+        font-weight: 700;
+        line-height: 56px; 
+        letter-spacing: -2.5px;
+        max-width: 500px;
+        margin-bottom: 40px;
+    }
+
+    &__subtitle{
+        color: #FFF;
+        font-family: Lexend Deca;
+        font-size: 15px;
+        line-height: 25px; 
+        max-width: 405px;
+        margin-bottom: 40px;
+        margin-left: 95px;
+    }
+
+    &__btn{
+        margin-left: 95px;
+        @include main-button();
+        &:hover{
+            @include btn-hover();
+        }
+    }
+
+    &__line1{
+        position: absolute;
+        left: 0;
+        top: 45%;
+    }
+
+    &__line2{
+        position: absolute;
+        left: 50%;
+        top: 45%;
+    }
+
+    &__line3{
+        position: absolute;
+        right: 0;
+        top: 57%;
+    }
+}
+
+@media only screen and (max-width:1325px){
+    .hero{
+
+        &__line1{
+            left: -100px;
+        }
+
+        &__line3{
+            display: none;
+        }
+    }
+}
+@media only screen and (max-width:1024px){
+    .hero{
+        background-image: url("../../images/hero_bg-tablet.jpg");
+        text-align: center;
+        &__title{
+            text-align: center;
+            margin: 0 auto;
+            margin-bottom: 24px;
+        }
+
+        &__subtitle{
+            text-align: center;
+            max-width: 573px;
+            margin: 0 auto;
+            margin-bottom: 32px;
+        }
+
+        &__btn{
+            margin: 0;
+        }
+
+        &__line1{
+            display: none;
+        }
+        &__line2{
+            left: 0;
+            top: 65%;
+        }
+        &__line3{
+            display: inline;
+            top: 75%;
+        }
+    }
+}
+
+@media only screen and (max-width:640px){
+    .hero{
+        background-image: url("../../images/hero_bg-mobile.jpg");
+
+        &__title{
+            font-size: 40px;
+            max-width: 311px;
+        }
+        &__subtitle{
+            max-width: 311px;
+        }
+        &__line3{
+            display: none;
+        }
+
+        &__line2{
+            left: -300px;
+            top: 75%;
+        }
+    }
+}

@@ -1,0 +1,110 @@
+.header{
+    padding: 21px 0;
+    width: 100%;
+    position: fixed;
+    background-color: #fff;
+    z-index: 9;
+    left: 0;
+    top: 0;
+
+    &__menu{
+        border: none;
+        outline: none;
+        display: none;
+    }
+
+    &__container{
+        display: flex;
+        align-items: center;
+        gap: 58px;
+
+        &-menu{
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__nav{
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__list{
+        display: flex;
+        align-items: center;
+        gap: 32px;
+
+        &-link{
+            color: $dim-grey;
+            font-weight: 700;
+            line-height: 25px; 
+            transition: all 0.3s;
+
+            &:hover{
+                color: $yellow;
+            }
+        }
+    }
+
+    &__btn{
+        @include main-button();
+        &:hover{
+            @include btn-hover();
+        }
+    }
+}
+
+@media only screen and (max-width:640px){
+    .header{
+        
+        &__container{
+            flex-direction: column;
+            gap: 10px;
+            position: relative;
+            &-menu{
+                gap: 35%;
+                margin-right: auto;
+                width: 100%;
+                padding: 22px 0;
+               
+            }
+        }
+
+        &__nav{
+            display: none;
+            margin-right: auto;
+            min-height: 100vh;
+            background-color: $dark-navy;
+            width: 70%;
+            padding: 64px 32px 24px 24px;
+            position: absolute;
+            left: 0;
+            top: 126%;
+            
+
+            &-open{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        &__menu{
+            display: block;
+        }
+
+        &__list{
+            flex-direction: column;
+            align-items: start;
+            gap: 24px;
+
+            &-link{
+                color: $light-grey;
+            }
+        }
+
+        &__btn{
+            margin-top: auto;
+        }
+    }
+}
