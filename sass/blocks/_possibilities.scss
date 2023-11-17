@@ -1,0 +1,151 @@
+.possibilities{
+    position: relative;
+
+    &__mask{
+        position: absolute;
+        right: 0;
+        z-index: -1;
+    }
+
+    &__maskcopy{
+        position: absolute;
+        left: 0;
+        z-index: -1;
+    }
+
+    &__mask2{
+        position: absolute;
+        right: 0;
+        z-index: -1;
+    }
+
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 160px;
+
+        &-arrow{
+            position: absolute;
+            right: 0;
+            top: 20%;
+        }
+
+        &-right{
+            position: absolute;
+            left: 0;
+        }
+
+        &-arrow2{
+            position: absolute;
+            right: 0;
+            top: 80%;
+        }
+        &-img{
+            border-radius: 50%;
+        }
+
+        &:nth-child(2){
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+    }
+
+    &__title{
+        color: $dark-navy;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 48px; 
+        letter-spacing: -2.143px;
+        margin-bottom: 24px;
+        max-width: 445px;
+    }
+
+    &__subtitle{
+        color: $dim-grey;
+        font-family: Lexend Deca;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 25px; 
+        margin-bottom: 40px;
+        max-width: 445px
+    }
+
+    &__btn{
+        @include main-button();
+        &:hover{
+            @include btn-hover();
+        }
+    }
+}
+
+@media only screen and (max-width:864px){
+    .possibilities{
+
+        &__mask{
+            display: none;
+        }
+
+        &__maskcopy{
+            display: none;
+        }
+
+        &__mask2{
+            display: none;
+        }
+
+        &__wrapper{
+            flex-direction: column-reverse;
+            align-items: center;
+            text-align: center;
+
+            &:nth-child(2){
+                flex-direction: column-reverse;
+            }
+
+            &-img{
+                margin-bottom: 40px;
+            }
+
+            &-arrow{
+                top: 14%;
+            }
+
+            &-right{
+                top: 40%;
+            }
+
+            &-arrow2{
+                top: 75%;
+            }
+        }
+
+        &__title{
+            text-align: center;
+            margin: 0 auto;
+            padding-bottom: 40px;
+        }
+
+        &__subtitle{
+            text-align: center;
+            max-width: 573px;
+        }
+    }
+}
+@media only screen and (max-width:768px){
+    .possibilities{
+
+        &__title{
+            font-size: 32px;
+        }
+
+        &__wrapper{
+            &-img{
+                max-width: 311px;
+            }
+
+            &-arrow{
+                display: none;
+            }
+        }
+    }
+}

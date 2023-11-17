@@ -342,4 +342,132 @@ main {
   .services__card-img {
     margin-bottom: 24px;
   }
+}
+.possibilities {
+  position: relative;
+}
+.possibilities__mask {
+  position: absolute;
+  right: 0;
+  z-index: -1;
+}
+.possibilities__maskcopy {
+  position: absolute;
+  left: 0;
+  z-index: -1;
+}
+.possibilities__mask2 {
+  position: absolute;
+  right: 0;
+  z-index: -1;
+}
+.possibilities__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 160px;
+}
+.possibilities__wrapper-arrow {
+  position: absolute;
+  right: 0;
+  top: 20%;
+}
+.possibilities__wrapper-right {
+  position: absolute;
+  left: 0;
+}
+.possibilities__wrapper-arrow2 {
+  position: absolute;
+  right: 0;
+  top: 80%;
+}
+.possibilities__wrapper-img {
+  border-radius: 50%;
+}
+.possibilities__wrapper:nth-child(2) {
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.possibilities__title {
+  color: #495567;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: -2.143px;
+  margin-bottom: 24px;
+  max-width: 445px;
+}
+.possibilities__subtitle {
+  color: #939CAA;
+  font-family: Lexend Deca;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+  margin-bottom: 40px;
+  max-width: 445px;
+}
+.possibilities__btn {
+  padding: 14px 45px;
+  background-color: #FCB72B;
+  border: 1px solid #FCB72B;
+  font-size: 15px;
+  color: #fff;
+  transition: all 0.5s;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+.possibilities__btn:hover {
+  background-color: transparent;
+  color: #FCB72B;
+}
+
+@media only screen and (max-width: 864px) {
+  .possibilities__mask {
+    display: none;
+  }
+  .possibilities__maskcopy {
+    display: none;
+  }
+  .possibilities__mask2 {
+    display: none;
+  }
+  .possibilities__wrapper {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+  .possibilities__wrapper:nth-child(2) {
+    flex-direction: column-reverse;
+  }
+  .possibilities__wrapper-img {
+    margin-bottom: 40px;
+  }
+  .possibilities__wrapper-arrow {
+    top: 14%;
+  }
+  .possibilities__wrapper-right {
+    top: 40%;
+  }
+  .possibilities__wrapper-arrow2 {
+    top: 75%;
+  }
+  .possibilities__title {
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 40px;
+  }
+  .possibilities__subtitle {
+    text-align: center;
+    max-width: 573px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .possibilities__title {
+    font-size: 32px;
+  }
+  .possibilities__wrapper-img {
+    max-width: 311px;
+  }
+  .possibilities__wrapper-arrow {
+    display: none;
+  }
 }/*# sourceMappingURL=styles.css.map */
