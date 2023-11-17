@@ -1,8 +1,70 @@
 .social{
-    background-image: url("../../images/app_img.jpg");
-    background-repeat: no-repeat;
-    background-size: contain;
+    background-color: $dark-navy;
     max-width: 1440px;
-    height: 300px;
+    max-height: 300px;
     margin: 0 auto;
+
+    &__container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 102px 0;
+    }
+
+    &__wrapper{
+        display: flex;
+        gap: 18px;
+    }
+
+    &__title{
+        color: #FFF;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 48px; 
+        letter-spacing: -2.143px;max-width: 415px;
+    }
+
+    &__btn{
+        background-color: $light-grey;
+        display: flex;
+        gap: 11px;
+        align-items: center;
+        padding: 8px 14px;
+        border-radius: 4px;
+
+        &-text{
+            color: $dark-navy;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: -0.446px;
+        }
+
+        &-title{
+            color: $dark-navy;
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: -0.446px; 
+        }
+    }
+}
+
+@media only screen and (max-width:864px){
+    .social{
+        &__container{
+            padding: 62px 0;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 40px;
+        }
+    }
+}
+
+@media only screen and (max-width:640px){
+    .social{
+
+        &__title{
+            font-size: 32px;
+        }
+    }
 }
